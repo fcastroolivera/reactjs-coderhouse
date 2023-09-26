@@ -1,4 +1,4 @@
-button.cart-widget {
+.atc {
   display: inline-block;
   background-color: black;
   padding: 8px 12px;
@@ -6,12 +6,10 @@ button.cart-widget {
   cursor: pointer;
   border: none;
   outline: none;
-  font-size: 1em;
+  font-size: .9em;
   color: white;
   font-weight: 500;
+  &:hover {
+    outline: 2px solid rgba(black, .5);
+  }
 }
-button.cart-widget i {
-  margin-right: 0.5em;
-}
-
-/*# sourceMappingURL=CartWidget.css.map */

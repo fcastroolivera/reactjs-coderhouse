@@ -1,7 +1,10 @@
 import './NavItem.css';
+import {Link} from "react-router-dom";
 
-export default function NavItem({ text }) {
+export default function NavItem({ text, to }) {
     return (
-        <a>{text}</a>
+        <li className={'nav-link'}>
+            <Link to={to}>{text}</Link>
+        </li>
     )
 }

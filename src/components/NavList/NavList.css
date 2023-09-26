@@ -1,9 +1,10 @@
-.navlist {
+.navlist ul {
   flex-grow: 1;
   display: flex;
   gap: 1.5em;
   align-items: center;
   justify-content: center;
+  list-style: none;
 }
 
 /*# sourceMappingURL=NavList.css.map */

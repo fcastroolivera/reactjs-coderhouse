@@ -1,0 +1,81 @@
+.product {
+  width: 20%;
+  background-color: white;
+  padding: 12px;
+  border-radius: 8px;
+  box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.05);
+  transition: box-shadow .25s ease;
+  display: flex;
+  flex-direction: column;
+  &:hover {
+    box-shadow: 0 3px 16px 0 rgba(0, 0, 0, 0.15);
+  }
+  .info {
+    a {
+      color: black;
+      text-decoration: none;
+    }
+    h3 {
+      font-size: .95em;
+      width: 100%;
+      height: 1.25em;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      text-align: center;
+    }
+    .price {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      span {
+        display: inline-block;
+        padding: 5px 10px;
+        margin-top: 1em;
+        margin-bottom: 1em;
+        text-align: center;
+        border-radius: 8px;
+        background-color: black;
+        color: white;
+        justify-self: center;
+      }
+    }
+  }
+  div.img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 16px;
+    img {
+      height: 100px;
+      aspect-ratio: 1;
+    }
+  }
+  div.btn {
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+    justify-content: center;
+    align-items: center;
+    margin-top: auto;
+    button, .btn {
+      width: 80%;
+    }
+  }
+  a.btn {
+    display: inline-block;
+    background-color: white;
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: 1px solid black;
+    cursor: pointer;
+    outline: none;
+    font-size: .85em;
+    color: black;
+    font-weight: 500;
+    text-align: center;
+    &:hover {
+      outline: 2px solid rgba(black, .25);
+    }
+  }
+}

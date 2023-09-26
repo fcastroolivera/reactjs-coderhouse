@@ -3,6 +3,6 @@ import './CartWidget.css';
 export default function CartWidget() {
 
     return (
-        <button><i className="fa-solid fa-cart-shopping"></i>5</button>
+        <button className={'cart-widget'}><i className="fa-solid fa-cart-shopping"></i>5</button>
     )
 }

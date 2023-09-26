@@ -4,6 +4,13 @@
     margin-left: auto;
     margin-right: auto;
   }
+  @media (max-width: 1023px) {
+    padding: 0 16px;
+  }
+}
+
+#root > .container {
+  margin-top: 2em;
 }
 
 body {
