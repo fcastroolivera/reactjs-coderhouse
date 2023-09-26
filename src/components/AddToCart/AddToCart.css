@@ -1,0 +1,17 @@
+.atc {
+  display: inline-block;
+  background-color: black;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  font-size: 0.9em;
+  color: white;
+  font-weight: 500;
+}
+.atc:hover {
+  outline: 2px solid rgba(0, 0, 0, 0.5);
+}
+
+/*# sourceMappingURL=AddToCart.css.map */

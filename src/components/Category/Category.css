@@ -1,0 +1,21 @@
+.category {
+  background-color: white;
+  padding: 1em;
+  border-radius: 8px;
+  box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.25s ease;
+}
+.category:hover {
+  box-shadow: 0 3px 16px 0 rgba(0, 0, 0, 0.15);
+}
+.category:hover a {
+  font-weight: 500;
+}
+.category a {
+  transition: font-weight 0.25s ease;
+  text-decoration: none;
+  color: black;
+  text-transform: capitalize;
+}
+
+/*# sourceMappingURL=Category.css.map */
