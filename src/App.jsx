@@ -1,10 +1,15 @@
 import './App.css'
-import Navbar from "./components/Navbar/Navbar.jsx";
 import Navigation from "./routes/Navigation.jsx";
+import {CartContext} from "./context/CartContext.jsx";
+import Loader from "./components/Loader/Loader.jsx";
 
 function App() {
+
     return (
-        <Navigation />
+        <CartContext>
+            <Loader />
+            <Navigation />
+        </CartContext>
     );
 }
 

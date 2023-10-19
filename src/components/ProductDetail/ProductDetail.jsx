@@ -17,7 +17,7 @@ export default function ProductDetail({params}) {
                    <h2>{title}</h2>
                    <p className={'desc'}>{description}</p>
                    <div className="btn">
-                       <AddToCart/>
+                       <AddToCart id={'1'}/>
                    </div>
                </div>
            </div>
