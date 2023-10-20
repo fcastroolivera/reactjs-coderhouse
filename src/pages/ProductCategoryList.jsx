@@ -27,9 +27,7 @@ export default function ProductCategoryList() {
             <Navbar/>
             <main className='container'>
                 <h2>Productos de {categoryId}</h2>
-                <ProductListContainer>
-                    <ProductList />
-                </ProductListContainer>
+                <ProductListContainer />
             </main>
         </>
     )

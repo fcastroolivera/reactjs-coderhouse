@@ -4,7 +4,7 @@ import AddToCart from "../AddToCart/AddToCart.jsx";
 
 export default function ProductDetail({params}) {
 
-    const {title, image, description, category} = params;
+    const {name, image, description, category, price, stock} = params;
 
    return (
        <div className="product-detail">
@@ -14,7 +14,7 @@ export default function ProductDetail({params}) {
                </div>
                <div className="info">
                    <span className="breadcrumbs"><Link to={'/'}>Home</Link> / <Link to={'/'}>{category}</Link></span>
-                   <h2>{title}</h2>
+                   <h2>{name}</h2>
                    <p className={'desc'}>{description}</p>
                    <div className="btn">
                        <AddToCart id={'1'}/>
