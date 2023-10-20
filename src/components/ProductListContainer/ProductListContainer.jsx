@@ -4,23 +4,36 @@ import {useContext, useEffect, useState} from "react";
 import {CartCtx} from "../../context/CartContext.jsx";
 import {useParams} from "react-router-dom";
 
-import {collection, getDocs} from "firebase/firestore"
+import {collection, getDocs, query, where} from "firebase/firestore"
 import {firestore} from "../../firestore/firestore.js";
 
-export default function ProductListContainer({ children }) {
-    const {setIsLoading} = useContext(CartCtx)
+export default function ProductListContainer() {
+    const { setIsLoading } = useContext(CartCtx)
     const [productList, setProductList] = useState([]);
-    const {categoryId} = useParams();
+    const { category} = useParams();
 
     useEffect(() => {
         setIsLoading(true);
 
-        const productsRef = collection(firestore, "products");
-        getDocs(productsRef).then(res => {
-            console.log('asd')
-        })
+        if (category) {
+            const q = query(collection(firestore, "products"), where("category", "==", category));
+            getDocs(q).then(snapshot => {
+                setProductList(snapshot.docs.map(product => (
+                    {id: product.id, ...product.data()}
+                )))
+                setIsLoading(false);
+            })
+        } else {
+            const productsRef = collection(firestore, "products");
+            getDocs(productsRef).then(res => {
+                setProductList(res.docs.map(product => (
+                    {id: product.id, ...product.data()}
+                )))
+                setIsLoading(false);
+            })
+        }
 
-    }, [categoryId]);
+    }, [category]);
 
     return (
         <div className="productcontainer">

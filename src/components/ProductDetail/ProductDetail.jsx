@@ -13,7 +13,7 @@ export default function ProductDetail({params}) {
                    <img src={image} alt="Product image"/>
                </div>
                <div className="info">
-                   <span className="breadcrumbs"><Link to={'/'}>Home</Link> / <Link to={'/'}>{category}</Link></span>
+                   <span className="breadcrumbs"><Link to={'/'}>Home</Link> / <Link to={'/category/' + category}>{category}</Link></span>
                    <h2>{name}</h2>
                    <p className={'desc'}>{description}</p>
                    <div className="btn">

@@ -1,5 +1,5 @@
 import {useContext, useEffect, useState} from "react";
-import {useParams} from "react-router-dom";
+import {Link, useParams} from "react-router-dom";
 import ProductDetail from "../ProductDetail/ProductDetail.jsx";
 
 import {firestore} from "../../firestore/firestore.js";
@@ -14,20 +14,27 @@ export default function ProductDetailContainer() {
     useEffect(() => {
         setIsLoading(true)
 
-        const productRef = doc(firestore, "products", "IKKIgt8vLq5FiQQoKB81");
+        const productRef = doc(firestore, "products", productId);
 
         getDoc(productRef).then(res => {
             if (res.exists()) {
-                setProductInfo({ id: res.id, ...res.data()});
-            } else {
-                console.log('producto no existe')
+                setProductInfo({id: res.id, ...res.data()});
             }
+            setIsLoading(false)
         })
-
-        setIsLoading(false);
     }, [productId]);
 
     return (
-        <ProductDetail params={productInfo}/>
+        <>
+            {
+                productInfo.id ?
+                    <ProductDetail params={productInfo}/>
+                    :
+                    <>
+                        <p>El producto no existe.</p>
+                        <Link to={'/'}>Volver al inicio</Link>
+                    </>
+            }
+        </>
     )
 }

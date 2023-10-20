@@ -49,6 +49,7 @@
 .product div.img img {
   height: 100px;
   aspect-ratio: 1;
+  border-radius: 16px;
 }
 .product div.btn {
   display: flex;
