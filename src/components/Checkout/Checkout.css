@@ -1,0 +1,61 @@
+.checkoutcontainer {
+  margin: 1.5em 0;
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  padding: 1em;
+}
+.checkoutcontainer .empty {
+  font-weight: bold;
+}
+.checkoutcontainer > h2 {
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+div.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form {
+  width: 75%;
+}
+form .formgroup {
+  width: 100%;
+  margin-bottom: 1em;
+}
+form .formgroup label {
+  display: block;
+  cursor: pointer;
+}
+form .formgroup input {
+  width: 100%;
+  padding: 8px 12px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.75);
+}
+form .formgroup input:focus {
+  border-bottom: 2px solid rgba(0, 0, 0, 0.9);
+  outline: none;
+}
+form input[type=submit] {
+  width: 75%;
+  margin: auto;
+  display: block;
+  padding: 8px 12px;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  font-weight: bold;
+  border-radius: 6px;
+}
+form input[type=submit]:focus {
+  outline: none;
+}
+
+/*# sourceMappingURL=Checkout.css.map */

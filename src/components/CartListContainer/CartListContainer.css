@@ -1,0 +1,35 @@
+.cartcontainer {
+  margin: 1.5em 0;
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  padding: 1em;
+}
+.cartcontainer .empty {
+  font-weight: bold;
+}
+.cartcontainer > h2 {
+  text-align: center;
+  margin-bottom: 1em;
+}
+.cartcontainer .checkoutBtn {
+  width: 75%;
+  margin: auto;
+  display: block;
+  padding: 8px 12px;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  font-weight: bold;
+  border-radius: 6px;
+  text-decoration: none;
+  text-align: center;
+  margin-top: 1.5em;
+}
+.cartcontainer .checkoutBtn:focus {
+  outline: none;
+}
+
+/*# sourceMappingURL=CartListContainer.css.map */

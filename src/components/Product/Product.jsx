@@ -18,7 +18,7 @@ export default function Product({ data }) {
             </div>
             <div className="btn">
                 <Link to={`/product/${id}`} className={'btn'}>Ver información</Link>
-                <AddToCart/>
+                <AddToCart data={data}/>
             </div>
         </div>
     )

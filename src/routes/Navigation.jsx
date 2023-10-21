@@ -2,8 +2,8 @@ import {createBrowserRouter, RouterProvider} from "react-router-dom";
 import HomePage from "../pages/HomePage.jsx";
 import ProductDetailPage from "../pages/ProductDetailPage.jsx";
 import ProductCategoryList from "../pages/ProductCategoryList.jsx";
-import CategoryListPage from "../pages/CategoryListPage.jsx";
 import CartPage from "../pages/CartPage.jsx";
+import CheckoutPage from "../pages/CheckoutPage.jsx";
 
 export default function Navigation() {
     const routes = createBrowserRouter([
@@ -17,8 +17,8 @@ export default function Navigation() {
             path: '/category/:category',
             element: <ProductCategoryList/>
         }, {
-            path: '/categories',
-            element: <CategoryListPage/>
+            path: '/checkout',
+            element: <CheckoutPage/>
         }, {
             path: '/cart',
             element: <CartPage/>

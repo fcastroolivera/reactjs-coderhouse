@@ -1,4 +1,4 @@
-button.cart-widget {
+.cart-widget {
     display: inline-block;
     background-color: black;
     padding: 8px 12px;
@@ -9,6 +9,7 @@ button.cart-widget {
     font-size: 1em;
     color: white;
     font-weight: 500;
+    text-decoration: none;
     i {
         margin-right: .5em;
     }
